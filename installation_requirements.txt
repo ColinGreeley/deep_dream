@@ -7,6 +7,8 @@ Under the "Note that Python 3.8.1 cannot be used on Windows XP or earlier." clic
 
 Download Windows x86-64 executable installer
 
+Make sure to add python to PATH
+
 
 
 Install required Python libraries
