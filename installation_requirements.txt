@@ -1,3 +1,18 @@
-Open CMD and run this command:
 
-pip install numpy pillow tensorflow
+If you dont have Python installed, go to 
+
+https://www.python.org/downloads/windows/
+
+Under the "Note that Python 3.8.1 cannot be used on Windows XP or earlier." click:
+
+Download Windows x86-64 executable installer
+
+
+
+Install required Python libraries
+
+Open CMD and run the following commands:
+
+pip install numpy 
+pip install pillow 
+pip install tensorflow
