@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.5
-# coding: utf-8
 from __future__ import print_function
 import os
 from io import BytesIO
@@ -195,6 +193,7 @@ def render_deepdream(t_obj, img0=img_noise,
     
     # generate details octave by octave
     for octave in range(octave_n):
+        print('Iteration:', octave+1, 'of 4')
         if octave>0:
             hi = octaves[-octave]
             img = resize(img, hi.shape[:2])+hi
@@ -219,13 +218,12 @@ for i in range(1,1000):
 
 # render images #
 
-#img0 = PIL.Image.open('/home/colin/Pictures/landscape.jpg')
 
 #'''
 print('\n\n\n                       ** Welcome to the image trippifier **')
 print('\n          ** Enter an input image, name it, choose the intensity and filter **')
 print('** For better results, run the program again on your output image with a different filter **')
-print('\n\n\nEnter file path for input image.  \nE.g. C:\Pictures\something.jpg')
+print('\n\n\nEnter file path for input image.  \nE.g. C:\\Users\\{username}\\Pictures\\something.jpg')
 img0 = input(':')
 while not os.path.isfile(img0):
     print('\n', img0, 'does not exist.')

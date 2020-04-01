@@ -1,0 +1,3 @@
+Open CMD and run this command:
+
+pip install numpy pillow tensorflow
