@@ -200,10 +200,10 @@ def render_deepdream(t_obj, img0=img_noise,
         for i in range(iter_n):
             g = calc_grad_tiled(img, t_grad)
             img += g*(step / (np.abs(g).mean()+1e-7))
-            print('.',end = ' ')
+            #print('.',end = ' ')
         #clear_output()
         im = showarray(img/255.0)
-    im.save('./' + image_name + '.jpg')
+    im.save('./results/' + image_name + '.jpg')
     
 
 #### display settings ####
@@ -244,8 +244,10 @@ filt = 0
 while filt < 1 or filt > 143:
     filt = int(input(':'))
 
-
+print('\n')
 render_deepdream(T(layer)[:,:,:,filt], img0, iter_n=iter_number, image_name=image_name)
+print('\nPress any button to continue...')
+input()
 #'''
 
 #render_deepdream(tf.square(T('mixed4c')), img0) # animals(wolves/foxes?)
